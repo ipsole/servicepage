@@ -14,7 +14,8 @@ import {
   PlayCircle,
   UploadCloud,
   Headset,
-  Lock
+  Lock,
+  LogOut
 } from 'lucide-react';
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
       <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="./logo.svg" alt="Docdril Logo" className="h-8 w-auto" />
+            <img src="./logo.png" className="h-8 w-auto" />
             <span className="text-xl font-bold tracking-tight">Docdril</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
