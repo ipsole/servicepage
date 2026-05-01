@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+
+  --color-bg: #0A0A0A;
+  --color-surface: #161618;
+  --color-accent: #FDE047;
+  --color-text-main: #FFFFFF;
+  --color-text-dim: #A1A1AA;
+  --color-border: #27272A;
+}
+
+@layer components {
+  .markdown-body {
+    @apply text-base;
+  }
+  .markdown-body h2 {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    color: var(--color-accent);
+    font-size: 14px;
+    border-top: 1px solid var(--color-border);
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+  .markdown-body h2:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .markdown-body h3 {
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .markdown-body p, .markdown-body li {
+    color: var(--color-text-main);
+  }
+  .markdown-body p {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 16px;
+  }
+  .markdown-body strong {
+    color: var(--color-accent);
+    background: #000;
+    padding: 0 4px;
+  }
+  .markdown-body ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+    list-style: none;
+    padding: 0;
+  }
+  .markdown-body li {
+    background: var(--color-surface);
+    padding: 12px 16px;
+    border-radius: 6px;
+    border-left: 3px solid var(--color-border);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.4;
+    letter-spacing: normal;
+  }
+  .markdown-body li:nth-child(even) {
+    border-left-color: #EF4444; 
+  }
+  .markdown-body li:nth-child(odd) {
+    border-left-color: #3B82F6; 
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dim);
+}

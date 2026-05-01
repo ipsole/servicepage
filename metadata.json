@@ -1,0 +1,8 @@
+{
+  "name": "AI Video Director",
+  "description": "An AI assistant that takes raw video transcripts and generates a tight, scroll-stopping editing plan optimized for Shorts and Reels.",
+  "requestFramePermissions": [
+    "display-capture"
+  ],
+  "majorCapabilities": []
+}
